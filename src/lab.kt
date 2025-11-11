@@ -45,6 +45,20 @@ fun createWeapon(name: String, damage: Int): String {
 fun createWeapon(damage: Int, isMagic: Boolean): String {
     return "${if (isMagic) "Магическое" else "Обычное"} оружие (Урон: $damage)"
 }
+//9
+fun heal() {
+    println("Лечение: +10 HP")
+}
+fun heal(amount: Int) {
+    println("Лечение: +$amount HP")
+}
+fun heal(amount: Int, isPotion: Boolean) {
+    if (isPotion) {
+        println("Выпито зелье (+$amount HP)")
+    } else {
+        println("Заклинание лечения (+$amount HP)")
+    }
+}
 fun main() {
     //1
     showGameLogo()
@@ -77,5 +91,10 @@ fun main() {
     println(createWeapon("Секира", 28))
     println(createWeapon(60, true))
     println(createWeapon(22, false))
+    //9
+    heal()
+    heal(50)
+    heal(150, true)
+    heal(225, false)
 
 }
