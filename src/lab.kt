@@ -35,6 +35,16 @@ fun castSpell(spell: String) {
 fun castSpell(spell: String, power: Int) {
     println("Каст $spell с силой $power!")
 }
+//8
+fun createWeapon(name: String): String {
+    return "Оружие: $name"
+}
+fun createWeapon(name: String, damage: Int): String {
+    return "Оружие: $name (Урон: $damage)"
+}
+fun createWeapon(damage: Int, isMagic: Boolean): String {
+    return "${if (isMagic) "Магическое" else "Обычное"} оружие (Урон: $damage)"
+}
 fun main() {
     //1
     showGameLogo()
@@ -62,5 +72,10 @@ fun main() {
     castSpell()
     castSpell("Огненный шар")
     castSpell("Исцеление", 75)
+    //8
+    println(createWeapon("Нож"))
+    println(createWeapon("Секира", 28))
+    println(createWeapon(60, true))
+    println(createWeapon(22, false))
 
 }
