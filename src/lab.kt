@@ -8,6 +8,9 @@ fun showEnemy(name: String, level: Int) {
 fun spawnEnemy(name: String, health: Int = 100, isBoss: Boolean = false) {
     println("Враг: $name (Здоровье: $health HP${if (isBoss) " | БОСС!" else ""}")
 }
+fun spawnEnemy2(name: String, health: Int = 100, isBoss: Boolean = false) {
+    println("Враг: $name (Здоровье: $health HP${if (isBoss) " | БОСС!" else ""}")
+}
 fun main() {
     //1
     showGameLogo()
@@ -19,5 +22,9 @@ fun main() {
     spawnEnemy("Дракон", isBoss = true)
     spawnEnemy("Орк", 150)
     spawnEnemy("Вампир", 200, true)
+
+    //4
+    spawnEnemy2("Гигант", 300)
+    spawnEnemy2("Король Тьмы", 500, true)
 
 }
