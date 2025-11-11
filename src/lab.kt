@@ -23,6 +23,18 @@ fun checkInventory(item: String): Boolean {
     val inventory = listOf("Меч", "Щит", "Ключ", "Карта")
     return item in inventory
 }
+//7
+fun castSpell() {
+    println("Каст случайного заклинания!")
+}
+
+fun castSpell(spell: String) {
+    println("Каст заклинания $spell!")
+}
+
+fun castSpell(spell: String, power: Int) {
+    println("Каст $spell с силой $power!")
+}
 fun main() {
     //1
     showGameLogo()
@@ -45,5 +57,10 @@ fun main() {
     //6
     println("Есть ли Меч в инвентаре: ${checkInventory("Меч")}")
     println("Есть ли Зелье в инвентаре: ${checkInventory("Зелье")}")
+
+    //7
+    castSpell()
+    castSpell("Огненный шар")
+    castSpell("Исцеление", 75)
 
 }
